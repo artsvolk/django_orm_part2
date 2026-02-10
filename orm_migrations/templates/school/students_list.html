@@ -1,0 +1,20 @@
+{% extends "school/base.html" %}
+
+{% block content %}
+    <h1>Список учеников</h1>
+    {% for student in object_list %}
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">{{ student.name }} ({{ student.group }} класс)</h5>
+                <p class="card-text text-wrap">
+                    Учителя:
+                    {% for teacher in student.teachers.all %}
+                        {{ teacher.name }} ({{ teacher.subject }}){% if not forloop.last %}, {% endif %}
+                    {% empty %}
+                        <em>нет учителей</em>
+                    {% endfor %}
+                </p>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
