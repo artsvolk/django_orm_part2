@@ -35,15 +35,15 @@
    - Создайте файл `website/settings_local.py` (пример ниже).
    - Убедитесь, что в PostgreSQL создана база данных `school`.
 
-5. **Пример `settings_local.py`**:
+5. 5. **Пример `settings_local.py`**:
    ```python
-   # D:\PycharmProjects\django_orm_part2\orm_migrations\website\settings_local.py
+   # orm_migrations/website/settings_local.py
    DATABASES = {
        'default': {
            'ENGINE': 'django.db.backends.postgresql',
            'NAME': 'school',
            'USER': 'postgres',
-           'PASSWORD': 'postgres',
+           'PASSWORD': 'ваш_пароль_от_postgresql',
            'HOST': '127.0.0.1',
            'PORT': '5432',
        }
