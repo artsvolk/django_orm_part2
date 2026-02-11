@@ -1,14 +1,10 @@
-# IDE
 .idea/
 
-# Virtual environment
 .venv/
 __pycache__/
 *.pyc
 
-# Local settings (sensitive data)
 **/settings_local.py
 
-# OS
 .DS_Store
 Thumbs.db
